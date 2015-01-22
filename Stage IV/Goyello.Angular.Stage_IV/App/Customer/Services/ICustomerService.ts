@@ -1,4 +1,4 @@
-﻿import Customer = require("Models/Customer");
+﻿import Customer = require("Customer/Models/Customer");
 
 interface ICustomerService {
     getAll(): Customer[];    

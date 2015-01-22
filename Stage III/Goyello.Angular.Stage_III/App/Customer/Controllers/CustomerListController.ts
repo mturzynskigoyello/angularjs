@@ -15,8 +15,12 @@ class CustomerListController {
     orderByAscending = true;
 
     orderBy(fieldName: string) {
+        if (this.orderByFieldName === fieldName) {
+            this.orderByAscending = !this.orderByAscending;
+        } else {
+            this.orderByAscending = false;
+        }
         this.orderByFieldName = fieldName;
-        this.orderByAscending = !this.orderByAscending;
     }
 
 }
