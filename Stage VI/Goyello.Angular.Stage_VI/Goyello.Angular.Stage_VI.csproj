@@ -134,7 +134,7 @@
     <Content Include="App\Customer\Views\CreateCustomer.html" />
     <Content Include="App\Customer\Views\CustomerList.html" />
     <Content Include="Content\site.css" />
-    <Content Include="Default.html" />
+    <Content Include="Default.htm" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
