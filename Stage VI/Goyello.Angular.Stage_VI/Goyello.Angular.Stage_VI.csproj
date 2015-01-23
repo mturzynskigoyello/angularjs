@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Goyello.Angular.Stage_III</RootNamespace>
-    <AssemblyName>Goyello.Angular.Stage_III</AssemblyName>
+    <RootNamespace>Goyello.Angular.Stage_VI</RootNamespace>
+    <AssemblyName>Goyello.Angular.Stage_VI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -130,6 +131,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Customer\Views\CreateCustomer.html" />
+    <Content Include="App\Customer\Views\CustomerList.html" />
     <Content Include="Content\site.css" />
     <Content Include="Default.html" />
     <Content Include="favicon.ico" />
@@ -150,6 +153,7 @@
     <TypeScriptCompile Include="App\Config.ts" />
     <TypeScriptCompile Include="App\Customer\Config.ts" />
     <TypeScriptCompile Include="App\Customer\Controllers\CustomerListController.ts" />
+    <TypeScriptCompile Include="App\Customer\Controllers\NewCustomerController.ts" />
     <TypeScriptCompile Include="App\Customer\CustomerModule.ts" />
     <TypeScriptCompile Include="App\Customer\Models\Customer.ts" />
     <TypeScriptCompile Include="App\Customer\Services\CustomerService.ts" />
@@ -160,9 +164,6 @@
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\requirejs\require.d.ts" />
     <TypeScriptCompile Include="typings\underscore\underscore.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Readme.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -186,7 +187,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64750</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:64752/</IISUrl>
+          <IISUrl>http://localhost:64755/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

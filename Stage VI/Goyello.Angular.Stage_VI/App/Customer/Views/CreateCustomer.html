@@ -1,0 +1,58 @@
+﻿<div ng-controller="Customer.NewCustomerController as ctrl"
+     ng-cloak>
+    <h2>Add customer</h2>
+    <form role="form" name="addCustomerForm" novalidate
+          ng-submit="ctrl.save(addCustomerForm)">
+        <div ng-show="ctrl.hasValidationErrors(addCustomerForm)" class="alert alert-danger" role="alert">
+            Please correct all the errors.
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error': ctrl.hasError(addCustomerForm, addCustomerForm.firstName)}">
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control"
+                   id="firstName" name="firstName"
+                   ng-model="ctrl.customer.firstName"
+                   required
+                   ng-minlength="5"
+                   ng-maxlength="15">
+            <div ng-messages="addCustomerForm.firstName.$error"
+                 ng-if="ctrl.hasError(addCustomerForm, addCustomerForm.firstName)">
+                <div ng-message="required" class="help-block">First name is required</div>
+                <div ng-message="minlength" class="help-block">At least 5 characters</div>
+                <div ng-message="maxlength" class="help-block">At most 15 characters</div>
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error': ctrl.hasError(addCustomerForm, addCustomerForm.lastName)}">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control"
+                   id="lastName" name="lastName"
+                   ng-model="ctrl.customer.lastName"
+                   required
+                   ng-minlength="5"
+                   ng-maxlength="15">
+            <div ng-messages="addCustomerForm.lastName.$error"
+                 ng-if="ctrl.hasError(addCustomerForm, addCustomerForm.lastName)">
+                <div ng-message="required" class="help-block">Last name is required</div>
+                <div ng-message="minlength" class="help-block">At least 5 characters</div>
+                <div ng-message="maxlength" class="help-block">At most 15 characters</div>
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error': ctrl.hasError(addCustomerForm, addCustomerForm.dateOfBirth)}">
+            <label for="lastName">Last name</label>
+            <input type="date" class="form-control"
+                   id="dateOfBirth" name="dateOfBirth"
+                   ng-model="ctrl.customer.dateOfBirth"
+                   required>
+            <div ng-messages="addCustomerForm.dateOfBirth.$error"
+                 ng-if="ctrl.hasError(addCustomerForm, addCustomerForm.dateOfBirth)">
+                <div ng-message="required" class="help-block">Date of birth is required</div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            Submit
+        </button>
+    </form>
+</div>
