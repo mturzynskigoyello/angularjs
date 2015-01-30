@@ -6,7 +6,7 @@ namespace Goyello.Angular.Stage_V
 	{
 		protected void Application_Start()
 		{			
-			GlobalConfiguration.Configure(WebApiConfig.Register);		
+			
 		}
 	}
 }
